@@ -1,7 +1,7 @@
 import re
 from urllib.parse import urlparse
 
-class Extension:
+class ExtensionInstance:
     #FILTERS = [".jpg", ".gif", ".png", ".css"]
     FILTERS = []
     NAME = ""
@@ -11,14 +11,17 @@ class Extension:
     URL_PARSED_OBJECT = ""
     PRIORITY_LEVEL = 0
 
-    def __init__(self, targetUrl, filters, priorityLevel):
-        print(f'init new target extension')
+    def __init__(self, targetUrl, filters, threads, priorityLevel):
         self.setTarget(targetUrl)
         self.setName(targetUrl)
         self.createStorageFileDir()
         self.setFilters(filters)
         self.createCurrentUrl()
+        self.setThreads(threads)
         self.setPriorityLevel(priorityLevel)
+
+    def __repr__(self):
+        return(f'[{self.getName()}][URL]:{self.getTarget()}')
 
 # BELOW THIS ARE JUST SETTERS, GETTERS AND CREATES FOR DATA FOR THE EXTENSION IT SELF
 
@@ -47,7 +50,7 @@ class Extension:
         return self.STORAGE_FILE_DIR
 
     def setName(self, targetUrl):
-        self.NAME = re.search("^(?:http.?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)", self.TARGET)
+        self.NAME = re.search("^(?:http.?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n?]+)", self.TARGET)[1]
 
     def getName(self):
         return self.NAME
