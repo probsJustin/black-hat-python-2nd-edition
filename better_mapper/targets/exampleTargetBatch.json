@@ -1,0 +1,14 @@
+[
+  "target_domain_here",{
+    "FULL_TARGET_URL" : "",
+    "FILTERS" : "",
+    "THREADS" : 1,
+    "PRIORITY_LEVEL" : 0
+  },
+  "target_domain_here_0",{
+    "FULL_TARGET_URL" : "",
+    "FILTERS" : "",
+    "THREADS" : 1,
+    "PRIORITY_LEVEL" : 0
+  }
+]
