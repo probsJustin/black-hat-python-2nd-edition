@@ -1,12 +1,12 @@
 {
   "facebook.com":{
-    "FULL_TARGET_URL" : "https://facebook.com",
+    "FULL_TARGET_URL" : "",
     "FILTERS" : "['.photosOfYourMom']",
     "THREADS" : 1,
     "PRIORITY_LEVEL" : 0
     },
   "target_domain_here":{
-    "FULL_TARGET_URL" : "https://google.com",
+    "FULL_TARGET_URL" : "",
     "FILTERS" : "['.photosOfYourMom', '.jpg', '.css']",
     "THREADS" : 1,
     "PRIORITY_LEVEL" : 0
